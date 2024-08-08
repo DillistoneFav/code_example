@@ -1,0 +1,59 @@
+.ETT-VehicleRelease {
+   display: grid;
+   grid-template-areas:
+    "executorBefore executorAfter"
+    "indicators indicators";
+
+   &__executorBefore {
+      grid-area: executorBefore;
+   }
+
+   &__executorAfter {
+      grid-area: executorAfter;
+   }
+
+   &__indicators {
+      grid-area: indicators;
+   }
+
+   &__inputField {
+      display: grid;
+      grid-template-columns: 1fr 64px min-content;
+      align-items: baseline;
+      max-width: 140px;
+
+      &_short {
+         grid-template-columns: 1fr 20px min-content;
+      }
+
+      &_long {
+         grid-template-columns: 160px 90px min-content;
+      }
+   }
+
+   &__input {
+      width: 64px;
+
+      &_long {
+         width: 90px;
+      }
+   }
+
+   &__amountResult {
+      margin-left: 50px;
+      min-width: 130px;
+   }
+
+   &__fuelType {
+      width: 152px;
+   }
+
+   &__fuelTanks {
+      display: grid;
+      grid-template-columns: 160px 90px min-content;
+   }
+
+   &__infobox {
+      width: 255px;
+   }
+}
