@@ -118,6 +118,7 @@ function DispatcherPanel({
         (fuelConsumption.actual || 0) - fuelConsumption.plan,
         FUEL_AMOUNT_PRECISION
     );
+
     const shouldShowFuelDifference = readingResult && fuelConsumption.plan;
 
     const isReadingsValid = () => validateOdometer({
@@ -354,7 +355,7 @@ function DispatcherPanel({
                     )}
                 />
 
-                <div>
+                <>
                     <AmountInputField
                         dataQa="DispatcherPanelArrivalFuel"
                         readOnly={isFuelInputReadOnly(
@@ -402,7 +403,7 @@ function DispatcherPanel({
                             planValuePrecision={READING_PRECISION}
                         />
                     </AmountInputField>
-                </div>
+                </>
 
                 {!hasDatesFeature &&
                     <DateTimeWithTimeZone
